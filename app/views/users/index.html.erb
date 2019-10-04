@@ -1,0 +1,9 @@
+  <%= form_tag file_import_users_path, multipart: true do %>
+    <%= file_field_tag :file,:accept=>'.csv' %>
+    <%= submit_tag "Import csv" %> 
+    <% end %><br>
+
+    <%if @users.present?%>
+      <%=render 'showing_data'%>
+    <%end%>
+

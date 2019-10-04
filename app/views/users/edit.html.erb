@@ -1,0 +1,47 @@
+<%=form_tag url_for(:controller => 'users', :action => 'update'), :method => 'put' do %>
+<p>
+  Pri<br>
+  <%= number_field_tag 'user[Pri]',nil,:placeholder=>@user.file['Pri']%>
+</p>
+<p>
+  Question<br>
+  <%= text_area_tag 'user[Question]',nil,:placeholder=>@user.file['Question']%>
+</p>
+<p>
+  Teaming<br>
+  <%= text_area_tag 'user[Teaming]',nil,:placeholder=>@user.file['Teaming Stages']%>
+</p>
+<p>
+  Appears<br>
+  <%= number_field_tag 'user[Appears]',nil,:placeholder=>@user.file['Appears (Day)']%>
+</p>
+<p>
+  Frequency<br>
+  <%= number_field_tag 'user[Frequency]',nil,:placeholder=>@user.file['Frequency']%>
+</p>
+<p>
+  Type<br>
+  <%= text_area_tag 'user[Type]',nil,:placeholder=>@user.file['Type']%>
+</p>
+<p>
+  Role<br>
+  <%= text_area_tag 'user[Role]',nil,:placeholder=>@user.file['Role']%>
+</p>
+<p>
+  Required<br>
+  <%= text_area_tag 'user[Required]',nil,:placeholder=>@user.file['Required?']%>
+</p>
+<p>
+  Conditions<br>
+  <%= text_area_tag 'user[Conditions]',nil,:placeholder=>@user.file['Conditions']%>
+</p>
+<p>
+  Mapping<br>
+  <%= text_area_tag 'user[Mapping]',nil,:placeholder=>@user.file['Mapping']%>
+</p>
+
+<p>
+  <%= submit_tag %>
+</p>
+<% end %>
+
